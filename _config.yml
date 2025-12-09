@@ -20,7 +20,7 @@ locale: en-US
 title: "Zixiao(Tom) Tan"
 description: "<b> D</b>iscovering <b> A</b>nswers, <b> T</b>apping <b> A</b>wesomeness"
 #baseurl: "/hollyyfc.github.io" # the subpath of your site, e.g. #"/blog"
-url: "https://zixiaotan.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url: "https://zixiaotan21.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 logo: "/images/zixiaotan.jpg" # path of site logo
 date_format: "%B %-d, %Y"
 read_time: # reading time estimates, e.g. true
