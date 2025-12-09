@@ -21,7 +21,7 @@ title: "Yifan (Holly) Cui"
 description: "<b> D</b>iscovering <b> A</b>nswers, <b> T</b>apping <b> A</b>wesomeness"
 #baseurl: "/hollyyfc.github.io" # the subpath of your site, e.g. #"/blog"
 url: "https://zixiaotan.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-logo: "/images/logo.png" # path of site logo
+logo: "/images/zixiaotan.jpg" # path of site logo
 date_format: "%B %-d, %Y"
 read_time: # reading time estimates, e.g. true
 words_per_minute: # 200
@@ -79,7 +79,7 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-redirect-from
-  
+
 # Collections
 collections:
   research:
