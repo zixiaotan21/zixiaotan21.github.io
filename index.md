@@ -42,7 +42,7 @@ into line and curve charts.</li>
 
 <details>
   <summary> 
-    <b>AI Developer Intern @ </b> <a href="https://www.fsgmjt.com/"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSpQEvCf8ba9U00PeOgmvnmWOhArKyZ67bG273CVbYJ-W94ErxSL6cUxw58C58Q" width="60" height="60"/></a> <span style="float:right;"> <i>(May 2022 – Dec 2022)</i> </span>
+    <b>AI Developer Intern @ </b> <a href="https://www.fsgmjt.com/"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSpQEvCf8ba9U00PeOgmvnmWOhArKyZ67bG273CVbYJ-W94ErxSL6cUxw58C58Q" width="60" height="60"/></a> <span style="float:right;"> <i>(Feb 2024 – Jun 2024)</i> </span>
   </summary>
   <i>Lab Test Harmonization: Bio-BERT Based Deduplication of Test Labels</i>
   <ul>
@@ -54,7 +54,7 @@ into line and curve charts.</li>
 
 <details>
   <summary> 
-    <b>Research Assistant @ </b> <a href="https://www.hiya.com/"><img src="https://english.bnu.edu.cn/images/2025-06/1d90371b4858477794a9119a141c3049.jpeg" width="100" height="100"/></a> <span style="float:right;"> <i>(Jun 2022 – Aug 2022)</i> </span>
+    <b>Research Assistant @ </b> <a href="https://english.bnu.edu.cn/"><img src="https://english.bnu.edu.cn/images/2025-06/1d90371b4858477794a9119a141c3049.jpeg" width="100" height="100"/></a> <span style="float:right;"> <i>(Sep 2022 – Jun 2024)</i> </span>
   </summary>
   <i>Hiya Shield Project: Robocall Identification & Screening</i>
   <ul>
@@ -76,7 +76,7 @@ into line and curve charts.</li>
 |----------------------------------------|-----------------|------------------|---------------------|
 | **Duke University**                    | M.S. Student    | Statistics       | Aug 2024 - May 2026 |
 | **University of California, Berkeley** | Visiting Student | Data Science     | May 2023 - Aug 2023 |
-| **Beijig Normal University**           | B.S             | Mathematics      | Sep 2020 - Jun 2024 |
+|  <a href="https://english.bnu.edu.cn/"><img src="https://english.bnu.edu.cn/images/2025-06/1d90371b4858477794a9119a141c3049.jpeg" width="100" height="100"/></a>         | B.S             | Mathematics      | Sep 2020 - Jun 2024 |
 
   <br>
 
