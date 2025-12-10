@@ -42,7 +42,7 @@ into line and curve charts.</li>
 
 <details>
   <summary> 
-    <b>Student Research Affiliate @ </b> <a href="https://aihealth.duke.edu/"><img src="https://sites.duke.edu/aihealth/files/2023/02/Footer-2.png" width="80" height="80"/></a> <span style="float:right;"> <i>(May 2022 – Dec 2022)</i> </span>
+    <b>Student Research Affiliate @ </b> <a href="https://aihealth.duke.edu/"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSpQEvCf8ba9U00PeOgmvnmWOhArKyZ67bG273CVbYJ-W94ErxSL6cUxw58C58Q" width="80" height="80"/></a> <span style="float:right;"> <i>(May 2022 – Dec 2022)</i> </span>
   </summary>
   <i>Lab Test Harmonization: Bio-BERT Based Deduplication of Test Labels</i>
   <ul>
