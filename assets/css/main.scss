@@ -11,3 +11,26 @@ $min-font-size: 20px;
 $max-font-size: 22px;
 
 @import "so-simple";
+
+// 确保正文内容使用更大的字体
+body {
+  font-size: 20px;
+}
+
+.page-content {
+  font-size: 20px;
+  line-height: 1.6;
+
+  p, li, td, th {
+    font-size: 20px;
+  }
+}
+
+// 确保主页内容也使用更大的字体
+.intro {
+  font-size: 20px;
+}
+
+.entries-list .entry-excerpt {
+  font-size: 20px;
+}
