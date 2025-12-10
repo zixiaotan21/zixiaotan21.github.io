@@ -22,13 +22,9 @@ I am a Master's student in Statistics at Duke University. Before that, I obtaine
 
 ## 👩‍💻  Highlights & Updates
 
-**Invitee \|** [**R Dev Day @ Hutch**](https://contributor.r-project.org/events/) **@** <a href="https://www.r-project.org/foundation/"><img src="https://www.r-project.org/logo/Rlogo.svg" width="30" height="30"/></a>   <span style="float:right;"> <i>(Aug 2024)</i> </span>
-
-**Opportunity Scholar \|** [**posit::conf(2024)**](https://posit.co/conference/) **@** <a href="https://posit.co/"><img src="https://posit.co/wp-content/uploads/2022/10/Posit-logo-h-full-color-RGB-TM.svg" width="70" height="70"/></a>   <span style="float:right;"> <i>(Aug 2024)</i> </span>
-
 <details>
   <summary>
-  <b>Masters Statistician Intern @ </b> <a href="https://www.lilly.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Eli_Lilly_and_Company.svg/64px-Eli_Lilly_and_Company.svg.png" width="45" height="45"/></a>  <span style="float:right;"> <i>(May 2024 – Aug 2024)</i> </span>
+  <b>Data Scientist Intern @ </b> <a href="https://www.tencent.com/en-us/"><img src="/images/Tencent_logo.png" width="60" height="60" alt="Tencent"/></a>  <span style="float:right;"> <i>(May 2024 – Aug 2024)</i> </span>
   </summary>
   <i>Diabetes Common Safety Tables, Figures, Lists (TFLs) Automation</i>
   <ul>
