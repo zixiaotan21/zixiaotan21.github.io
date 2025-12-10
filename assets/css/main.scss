@@ -10,6 +10,10 @@ $base-font-size: 18px;
 $min-font-size: 18px;
 $max-font-size: 18px;
 
+// 调整标题大小（避免 h1 太大）
+$h1-min: 24px;
+$h1-max: 32px;
+
 @import "so-simple";
 
 // 确保正文内容使用更大的字体
