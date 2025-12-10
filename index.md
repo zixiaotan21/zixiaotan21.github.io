@@ -24,12 +24,19 @@ I am a Master's student in Statistics at Duke University. Before that, I obtaine
 
 <details>
   <summary>
-  <b>Data Scientist Intern @ </b> <a href="https://www.tencent.com/en-us/"><img src="https://www.tencent.net.cn/wp-content/uploads/2022/12/01_Tencent_Standard-Logo.png" width="100" height="100" alt="Tencent"/></a>  <span style="float:right;"> <i>(May 2024 – Aug 2024)</i> </span>
+  <b>Data Scientist Intern @ </b> <a href="https://www.tencent.com/en-us/"><img src="https://www.tencent.net.cn/wp-content/uploads/2022/12/01_Tencent_Standard-Logo.png" width="100" height="100" alt="Tencent"/></a>  <span style="float:right;"> <i>(May 2025 – Aug 2025)</i> </span>
   </summary>
-  <i>Diabetes Common Safety Tables, Figures, Lists (TFLs) Automation</i>
+  <i>ChatBI, Figures, Lists (TFLs) Automation</i>
   <ul>
-  <li>Developed and launched a Shiny app to automate the creation, execution, and review of common safety TFLs, integrating R and SAS code with output formatting, progress tracking, and error reporting through front-end UI design and back-end cloud system engineering; consolidated 30+ common safety TFLs from 300+ listings across 5+ Diabetes study by building a flexible internal TAFFY template project; reimagined the clinical reporting pipeline with enhanced efficiency and consistency</li>
-  <li>Orchestrated regular meetings with senior leadership; pitched the app to 600+ global employees; achieved successful implementations in Diabetes, with ongoing rollouts to Neuroscience and other therapeutic areas</li>
+  <li>Goal: Engineered an autonomous ChatBI Agent for Product teams, facilitating data exploration and lightweight ad-hoc
+analysis</li>
+  <li>Data Insight Agent : Implemented a RAG pipeline with LangChain to integrated metadata, compliance, and business
+knowledge bases for context retrieval.</li>
+  <li>Data Analysis Agent: Leveraged OpenAI Function Calling for precise intent classification and Text-to-SQL generation
+process.</li>
+  <li>Visualization Agent: Developed a rendering module that interfaces with the Xiaoma BI API, transforms query results
+into line and curve charts.</li>
+  <li>ntegrated LangSmith for end-to-end observability and evaluation, achieving 95% query accuracy rate in benchmark.</li>
   </ul>
 </details>
 
