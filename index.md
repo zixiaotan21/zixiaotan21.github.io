@@ -12,9 +12,8 @@ title:
 I am a Master's student in Statistics at Duke University. Before that, I obtained my Bachelor's in Mathematics at Beijing Normal University. 
 
 - **Statistics Background**: My academic path has led me to explore Bayesian Statistics and Causual Inference,  shaping my unique understanding of mathematics theory.
-- **LLM Experience**: With 5+ years of experience in AI, I've contributed as a Data Scientist Intern  @ <a href="https://www.tencent.com/en-us/"><img src="https://www.tencent.net.cn/wp-content/uploads/2022/12/01_Tencent_Standard-Logo.png" width="100" height="100" alt="Tencent"/></a> 
-- @ [Tencent Company](https://www.tencent.com/en-us/) and AI developer Intern at @ [Foshan Industry Group]. 
-- **Personal Interests**: I write Chinese Calligraphy and read some Chinese poetry.
+- **LLM Experience**: With 5+ years of experience in AI, I've contributed as a Data Scientist Intern  @ <a href="https://www.tencent.com/en-us/"><img src="https://www.tencent.net.cn/wp-content/uploads/2022/12/01_Tencent_Standard-Logo.png" width="100" height="100" alt="Tencent"/></a>  and AI developer Intern at @ </b> <a href="https://www.fsgmjt.com/"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSpQEvCf8ba9U00PeOgmvnmWOhArKyZ67bG273CVbYJ-W94ErxSL6cUxw58C58Q" width="60" height="60"/></a>
+- **Personal Interests**: In my spare time, I write Chinese Calligraphy and read some Chinese poetry.
 
 <div style="text-align: right">
     <a href="/docus/Zixiao_Tan_CV_new.pdf">👉View My Resume</a>
@@ -43,7 +42,7 @@ into line and curve charts.</li>
 
 <details>
   <summary> 
-    <b>Student Research Affiliate @ </b> <a href="https://aihealth.duke.edu/"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSpQEvCf8ba9U00PeOgmvnmWOhArKyZ67bG273CVbYJ-W94ErxSL6cUxw58C58Q" width="60" height="60"/></a> <span style="float:right;"> <i>(May 2022 – Dec 2022)</i> </span>
+    <b>AI Developer Intern @ </b> <a href="https://www.fsgmjt.com/"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSpQEvCf8ba9U00PeOgmvnmWOhArKyZ67bG273CVbYJ-W94ErxSL6cUxw58C58Q" width="60" height="60"/></a> <span style="float:right;"> <i>(May 2022 – Dec 2022)</i> </span>
   </summary>
   <i>Lab Test Harmonization: Bio-BERT Based Deduplication of Test Labels</i>
   <ul>
@@ -55,7 +54,7 @@ into line and curve charts.</li>
 
 <details>
   <summary> 
-    <b>Data Science Intern @ </b> <a href="https://www.hiya.com/"><img src="https://english.bnu.edu.cn/images/2025-06/1d90371b4858477794a9119a141c3049.jpeg" width="100" height="100"/></a> <span style="float:right;"> <i>(Jun 2022 – Aug 2022)</i> </span>
+    <b>Research Assistant @ </b> <a href="https://www.hiya.com/"><img src="https://english.bnu.edu.cn/images/2025-06/1d90371b4858477794a9119a141c3049.jpeg" width="100" height="100"/></a> <span style="float:right;"> <i>(Jun 2022 – Aug 2022)</i> </span>
   </summary>
   <i>Hiya Shield Project: Robocall Identification & Screening</i>
   <ul>
