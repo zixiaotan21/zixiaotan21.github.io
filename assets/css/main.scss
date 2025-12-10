@@ -6,31 +6,31 @@ sitemap: false
 @charset "utf-8";
 
 // 覆盖主题默认字体大小
-$base-font-size: 20px;
-$min-font-size: 20px;
-$max-font-size: 22px;
+$base-font-size: 18px;
+$min-font-size: 18px;
+$max-font-size: 18px;
 
 @import "so-simple";
 
 // 确保正文内容使用更大的字体
 body {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .page-content {
-  font-size: 20px;
-  line-height: 1.6;
+  font-size: 18px;
+  line-height: 1.2;
 
   p, li, td, th {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
 // 确保主页内容也使用更大的字体
 .intro {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .entries-list .entry-excerpt {
-  font-size: 20px;
+  font-size:18px;
 }
