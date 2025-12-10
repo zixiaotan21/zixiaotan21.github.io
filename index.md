@@ -74,8 +74,8 @@ into line and curve charts.</li>
 
 | *Institution*                                                                                                                                                      | *Degree*        | *Field of Study* | *Dates*             |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|------------------|---------------------|
-| <a href="https://english.bnu.edu.cn/"><img src="https://1000logos.net/wp-content/uploads/2017/12/Duke-University-Logo-1536x864.png" width="100" height="100"/></a> | M.S. Student    | Statistics       | Aug 2024 - May 2026 |
-| <a href="https://english.bnu.edu.cn/"><img src="https://logos-world.net/wp-content/uploads/2022/02/UC-Berkeley-Symbol-700x394.png" width="100" height="100"/></a>  | Visiting Student | Data Science     | May 2023 - Aug 2023 |
+| <a href="https://english.bnu.edu.cn/"><img src="https://1000logos.net/wp-content/uploads/2017/12/Duke-University-Logo-1536x864.png" width="130" height="130"/></a> | M.S. Student    | Statistics       | Aug 2024 - May 2026 |
+| <a href="https://english.bnu.edu.cn/"><img src="https://logos-world.net/wp-content/uploads/2022/02/UC-Berkeley-Symbol-700x394.png" width="130" height="130"/></a>  | Visiting Student | Data Science     | May 2023 - Aug 2023 |
 | <a href="https://english.bnu.edu.cn/"><img src="https://english.bnu.edu.cn/images/2025-06/1d90371b4858477794a9119a141c3049.jpeg" width="160" height="160"/></a>    | B.S             | Mathematics      | Sep 2020 - Jun 2024 |
 
   <br>
