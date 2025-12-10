@@ -12,7 +12,8 @@ title:
 I am a Master's student in Statistics at Duke University. Before that, I obtained my Bachelor's in Mathematics at Beijing Normal University. 
 
 - **Statistics Background**: My academic path has led me to explore Bayesian Statistics and Causual Inference,  shaping my unique understanding of mathematics theory.
-- **LLM Experience**: With 5+ years of experience in AI, I've contributed as a Data Scientist Intern @ [Tencent Company](https://www.tencent.com/en-us/) and AI developer Intern at @ [Foshan Industry Group]. 
+- **LLM Experience**: With 5+ years of experience in AI, I've contributed as a Data Scientist Intern  @ <a href="https://www.tencent.com/en-us/"><img src="https://www.tencent.net.cn/wp-content/uploads/2022/12/01_Tencent_Standard-Logo.png" width="100" height="100" alt="Tencent"/></a> 
+- @ [Tencent Company](https://www.tencent.com/en-us/) and AI developer Intern at @ [Foshan Industry Group]. 
 - **Personal Interests**: I write Chinese Calligraphy and read some Chinese poetry.
 
 <div style="text-align: right">
