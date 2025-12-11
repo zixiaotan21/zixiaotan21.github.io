@@ -1,5 +1,5 @@
 ---
-title: "Machine Learning in Healthcare: Lab Test Harmonization"
+title: "FinCom"
 image: 
   path: /images/banner1.jpg
   thumbnail: /images/workflow_v3.png
