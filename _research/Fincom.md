@@ -1,5 +1,5 @@
 ---
-title: "FinCom"
+title: "FinCom: Financial Multi-Agent Systems"
 image: 
   path: /images/banner1.jpg
   thumbnail: /images/workflow_v3.png
