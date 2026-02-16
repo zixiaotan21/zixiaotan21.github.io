@@ -6,38 +6,39 @@ image:
   caption: "Photo from [Vecteezy.com](https://www.vecteezy.com/)"
 ---
 
-**FinCom** (Financial Committee) is a governed multi-agent framework that operationalizes the **Disagree-or-Commit (DoC)** protocol to embed structured dissent into financial AI decision-making. By reframing disagreement as a governance primitive rather than noise, FinCom improves accountability, transparency, and reasoning robustness in agentic financial systems.
+**FinCom** (Financial Committee) is a supervisor-based multi-agent framework built with **LangGraph** for committee-style financial decision-making. Three domain-specialized agents---Research, Quantitative, and Risk---each powered by **Gemini-2.5-Flash** with **ReAct** reasoning loops and constrained toolsets, collaborate under a central Supervisor to produce unified financial recommendations. Evaluation is conducted via **LangSmith**'s LLM-as-a-Judge pipeline for scalable, reproducible assessment.
 
 ## Part I: Problem Statement
 
 <img src="/images/Agent_3.jpg" alt="poster" style="max-width: 40%;">
 
-LLM-powered multi-agent systems are increasingly used in financial analysis, with specialized agents mirroring institutional trading desks. However, existing coordination schemes are vulnerable to **sycophancy**---agents conform to peer reasoning instead of evidence, leading to premature consensus and degraded outcomes. This mirrors behavioral-finance biases like herding and overreaction, undermining reliability in autonomous systems. Current frameworks either lack explicit governance or rely on rigid adversarial workflows. FinCom addresses this gap with a lightweight, prompt-only dissent mechanism that requires no fine-tuning.
+LLM-powered multi-agent systems are reshaping financial analysis, with specialized agents mirroring institutional trading desks for research, quantitative modeling, and risk management. However, existing frameworks suffer from **sycophancy**---agents echo peer reasoning rather than reasoning independently---leading to consensus collapse. This mirrors behavioral-finance biases like herding and overreaction, undermining reliability in autonomous systems. Current approaches either lack explicit governance or rely on rigid adversarial workflows that are difficult to integrate. FinCom addresses this with a modular, **prompt-only** architecture requiring no task-specific fine-tuning.
 
 ## Part II: Multi-Agent Solution
 
 ![poster](/images/workflow_v3.png)
 
-A central **Supervisor** orchestrates three ReAct-enabled specialist agents, each with role-specific tools:
+The system is built as a **LangGraph** state machine, where each agent is instantiated as a **LangGraph node** connected to **Gemini-2.5-Flash** with role-specific system prompts and constrained tool access. The **Supervisor node** handles intent parsing, task decomposition, inter-agent coordination, iterative validation, and final synthesis. All agents operate in a **ReAct loop** (Reason + Act) for structured, step-by-step tool use.
 
-- **Research Agent** --- Qualitative evidence gathering via web search, SEC filing analysis (10-K, 10-Q, 8-K), and real-time market data retrieval.
-- **Quant Agent** --- Quantitative analysis including technical indicators (RSI, SMA, Bollinger Bands), strategy backtesting, and correlation analysis.
-- **Risk Management Agent** --- Portfolio risk quantification through volatility/drawdown measurement, Value-at-Risk estimation, stress testing, and qualitative risk narratives.
+- **Research Agent** --- Runs a ReAct loop over tools for **web search** (with source attribution), **SEC filing analysis** (10-K, 10-Q, 8-K extraction of MD&A, Risk Factors, Financial Statements with LLM-powered summarization), and **real-time market data retrieval** (price aggregates, snapshots, SMA, EMA, RSI, MACD).
+- **Quant Agent** --- Executes **technical indicator computation** (RSI, SMA, Bollinger Bands), **strategy backtesting** (SMA_CROSS, RSI_MEANREV over historical data), and **correlation analysis** (inter-asset correlation for diversification and hedging).
+- **Risk Management Agent** --- Computes **annualized volatility and maximum drawdown** from log returns, **Value-at-Risk (VaR)** at 99% confidence via historical simulation, **stress testing** under adverse scenario analyses, and integrates **qualitative risk narratives** (regulatory, geopolitical, competitive factors).
 
-Under the **DoC protocol**, each agent independently reviews peers' reasoning, flagging inconsistencies or unsupported claims. The Supervisor mediates exchanges until justified consensus or documented dissent is reached, ensuring the final recommendation reflects both critique and convergence.
+The Supervisor orchestrates a structured deliberation cycle: each agent independently reviews peers' outputs, flagging inconsistencies or unsupported claims. The Supervisor mediates exchanges until consensus or justified dissent is reached, ensuring the final decision reflects both critique and convergence.
 
 ## Part III: Evaluation
 
 ![poster](/images/eval_v1.png)
 
-Evaluated on **120 handcrafted financial tasks** spanning research, quantitative, risk management, and joint investment plan categories using an LLM-as-a-Judge protocol:
+Evaluation is conducted through **LangSmith**, using a structured **LLM-as-a-Judge** pipeline for consistent, scalable assessment of reasoning quality. Each agent's response is compared against hand-labeled reference answers: a score of 1 is assigned if the output includes all key elements without contradictions, 0 otherwise. Each evaluation is repeated to mitigate stochastic variability, and averaged results are reported.
 
-- DoC achieved **71.3% average accuracy** vs. 61.6% for the consensus baseline.
-- The largest gain was in **risk management tasks (+16.6 pp)**, where enforced dissent uncovered overlooked downside scenarios.
-- **Quantitative tasks** reached the highest accuracy (89.7%), showing structured critique strengthens numerical reasoning.
-- Qualitatively, DoC produced richer reasoning paths with better source attribution and fewer unsupported claims.
+**Dataset:** 120 handcrafted data points across four task categories---research-heavy, quant-heavy, risk management-oriented, and joint investment plan evaluations---with 30 instances each. All tasks are manually designed, annotated, and verified to reflect realistic end-to-end financial workflows.
 
-These results demonstrate that procedural dissent---embedding mandatory peer review at the prompt layer---improves correctness, transparency, and traceability in multi-agent financial reasoning.
+**Results:**
+- Average accuracy of **71.3%** vs. 61.6% for the baseline---an improvement across all domains.
+- Largest gain in **risk management tasks (+16.6 pp)**, where structured review uncovered overlooked downside scenarios and improved tail risk quantification.
+- **Quantitative tasks** achieved the highest accuracy (89.7%), demonstrating that structured critique strengthens numerical reasoning in tool-based analyses.
+- Research and investment plan tasks showed fewer unsupported claims and improved source attribution.
 
 
 
