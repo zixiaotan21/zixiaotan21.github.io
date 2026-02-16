@@ -14,6 +14,8 @@ LLM-powered multi-agent systems are increasingly used in financial analysis, wit
 
 ## Part II: Multi-Agent Solution
 
+![poster](/images/workflow_v3.png)
+
 A central **Supervisor** orchestrates three ReAct-enabled specialist agents, each with role-specific tools:
 
 - **Research Agent** --- Qualitative evidence gathering via web search, SEC filing analysis (10-K, 10-Q, 8-K), and real-time market data retrieval.
@@ -23,6 +25,8 @@ A central **Supervisor** orchestrates three ReAct-enabled specialist agents, eac
 Under the **DoC protocol**, each agent independently reviews peers' reasoning, flagging inconsistencies or unsupported claims. The Supervisor mediates exchanges until justified consensus or documented dissent is reached, ensuring the final recommendation reflects both critique and convergence.
 
 ## Part III: Evaluation
+
+![poster](/images/eval_v1.png)
 
 Evaluated on **120 handcrafted financial tasks** spanning research, quantitative, risk management, and joint investment plan categories using an LLM-as-a-Judge protocol:
 
