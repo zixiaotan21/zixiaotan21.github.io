@@ -10,7 +10,7 @@ image:
 
 ## Part I: Problem Statement
 
-<img src="/images/Agent_3.jpg" alt="poster" style="max-width: 60%;">
+<img src="/images/Agent_3.jpg" alt="poster" style="max-width: 40%;">
 
 LLM-powered multi-agent systems are increasingly used in financial analysis, with specialized agents mirroring institutional trading desks. However, existing coordination schemes are vulnerable to **sycophancy**---agents conform to peer reasoning instead of evidence, leading to premature consensus and degraded outcomes. This mirrors behavioral-finance biases like herding and overreaction, undermining reliability in autonomous systems. Current frameworks either lack explicit governance or rely on rigid adversarial workflows. FinCom addresses this gap with a lightweight, prompt-only dissent mechanism that requires no fine-tuning.
 
