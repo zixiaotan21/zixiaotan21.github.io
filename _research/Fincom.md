@@ -41,10 +41,15 @@ Evaluation is conducted through **LangSmith**, using a structured **LLM-as-a-Jud
 **Dataset:** 120 handcrafted data points across four task categories---research-heavy, quant-heavy, risk management-oriented, and joint investment plan evaluations---with 30 instances each. All tasks are manually designed, annotated, and verified to reflect realistic end-to-end financial workflows.
 
 **Results:**
-- Average accuracy of **71.3%** vs. 61.6% for the baseline---an improvement across all domains.
-- Largest gain in **risk management tasks (+16.6 pp)**, where structured review uncovered overlooked downside scenarios and improved tail risk quantification.
-- **Quantitative tasks** achieved the highest accuracy (89.7%), demonstrating that structured critique strengthens numerical reasoning in tool-based analyses.
-- Research and investment plan tasks showed fewer unsupported claims and improved source attribution.
+
+| Method | Research | Quant Finance | Risk Management | Investment Plan | Overall Avg |
+|--------|----------|---------------|-----------------|-----------------|-------------|
+| Disagree or Commit (DoC) | **63.3%** | **89.7%** | **66.6%** | **66.8%** | **71.6%** |
+| Baseline (no DoC) | 56.6% | 83.3% | 50.0% | 56.3% | 61.6% |
+
+*Table: Performance comparison of average hit-rate across use cases for agents with and without the Disagree & Commit prompting strategy. Scores represent the proportion of correct or complete reasoning steps according to LLM-as-a-Judge evaluation.*
+
+Across all domains, the DoC protocol improved decision quality and reasoning robustness compared to the consensus-based baseline. Agents operating under DoC achieved an average accuracy of **71.6%**, outperforming the baseline's 61.6%. The largest gain occurred in **risk management tasks (+16.6 pp)**, where enforced dissent led agents to identify overlooked downside scenarios and quantify tail risks more accurately. **Quantitative finance tasks** achieved the highest overall accuracy (89.7%), showing that structured critique strengthens numerical reasoning in tool-based analyses. Research and investment plan tasks also benefited, with fewer unsupported claims and improved source attribution.
 
 
 
