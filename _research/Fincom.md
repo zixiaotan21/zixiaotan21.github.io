@@ -50,3 +50,7 @@ Evaluation is conducted through **LangSmith**, using a structured **LLM-as-a-Jud
 *Table: Performance comparison of average hit-rate across task categories for agents with and without the Disagree & Commit (DoC) prompting strategy. Scores represent the proportion of correct or complete reasoning steps according to LLM-as-a-Judge evaluation.*
 
 Across all domains, the DoC protocol improved decision quality and reasoning robustness compared to the consensus-based baseline. Agents operating under DoC achieved an average accuracy of **71.6%**, outperforming the baseline's 61.6%. The largest gain occurred in **risk management tasks (+16.6 pp)**, where enforced dissent led agents to identify overlooked downside scenarios and quantify tail risks more accurately. **Quantitative finance tasks** achieved the highest overall accuracy (89.7%), demonstrating that structured critique strengthens numerical reasoning in tool-based analyses. Research and investment plan tasks also benefited, with fewer unsupported claims and improved source attribution.
+
+## Part IV: Results
+
+Relevant Paper draft has submitted to AAAI: AI for Finance
