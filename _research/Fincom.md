@@ -51,6 +51,8 @@ Evaluation is conducted through **LangSmith**, using a structured **LLM-as-a-Jud
 
 Across all domains, the DoC protocol improved decision quality and reasoning robustness compared to the consensus-based baseline. Agents operating under DoC achieved an average accuracy of **71.6%**, outperforming the baseline's 61.6%. The largest gain occurred in **risk management tasks (+16.6 pp)**, where enforced dissent led agents to identify overlooked downside scenarios and quantify tail risks more accurately. **Quantitative finance tasks** achieved the highest overall accuracy (89.7%), demonstrating that structured critique strengthens numerical reasoning in tool-based analyses. Research and investment plan tasks also benefited, with fewer unsupported claims and improved source attribution.
 
-## Part IV: Results
+## Part IV: Publication
 
-Relevant Paper draft has submitted to AAAI: AI for Finance
+A relevant paper draft has been submitted to **AAAI 2026: AI for Finance**.
+
+![poster](/images/KDD.jpg)
