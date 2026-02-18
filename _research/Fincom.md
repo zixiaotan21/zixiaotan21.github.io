@@ -14,6 +14,19 @@ image:
 
 LLM-powered multi-agent systems are reshaping financial analysis, with specialized agents mirroring institutional trading desks for research, quantitative modeling, and risk management. However, existing frameworks suffer from **sycophancy**---agents echo peer reasoning rather than reasoning independently---leading to consensus collapse. This mirrors behavioral-finance biases like herding and overreaction, undermining reliability in autonomous systems. Current approaches either lack explicit governance or rely on rigid adversarial workflows that are difficult to integrate. FinCom addresses this with a modular, **prompt-only** architecture requiring no task-specific fine-tuning.
 
+| Agent | Tool | Functionality |
+|-------|------|---------------|
+| Research Agent | Web Search | Real-time information retrieval with source attribution |
+| Research Agent | SEC Filing Analyzer | Extraction and summarization of 10-K, 10-Q, 8-K filings (MD&A, Risk Factors, Financial Statements) |
+| Research Agent | Market Data Retrieval | Price aggregates, snapshots, SMA, EMA, RSI, MACD |
+| Quant Agent | Technical Indicator Computation | RSI, SMA, Bollinger Bands calculation |
+| Quant Agent | Strategy Backtesting | SMA_CROSS, RSI_MEANREV over historical data |
+| Quant Agent | Correlation Analysis | Inter-asset correlation for diversification and hedging |
+| Risk Management Agent | Volatility & Drawdown Calculator | Annualized volatility and maximum drawdown from log returns |
+| Risk Management Agent | Value-at-Risk (VaR) | 99% confidence VaR via historical simulation |
+| Risk Management Agent | Stress Testing | Adverse scenario analyses |
+| Risk Management Agent | Qualitative Risk Narratives | Regulatory, geopolitical, and competitive risk factors |
+
 ## Part II: Multi-Agent Solution
 
 ![poster](/images/workflow_v3.png)
