@@ -1,0 +1,147 @@
+<svg width="800" height="700" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#555"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="700" fill="#F8F9FA"/>
+
+  <!-- User Query -->
+  <rect x="300" y="15" width="200" height="38" rx="19" fill="#2980B9" stroke="#1A5276" stroke-width="1.5"/>
+  <text x="400" y="39" text-anchor="middle" fill="white" font-size="14" font-weight="bold">User Query</text>
+
+  <!-- Arrow 1 -->
+  <line x1="400" y1="53" x2="400" y2="73" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- DeepSeek-R1 Orchestrator -->
+  <rect x="160" y="73" width="480" height="48" rx="8" fill="#E67E22" stroke="#CA6F1E" stroke-width="1.5"/>
+  <text x="400" y="94" text-anchor="middle" fill="white" font-size="13" font-weight="bold">DeepSeek-R1 Orchestrator</text>
+  <text x="400" y="111" text-anchor="middle" fill="rgba(255,255,255,0.9)" font-size="10">ReAct Loop  ·  Function Call  ·  Chat History</text>
+
+  <!-- Arrow 2 -->
+  <line x1="400" y1="121" x2="400" y2="141" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- ─── STAGE 1: Table Selection ─── -->
+  <rect x="30" y="141" width="740" height="205" rx="10" fill="#EBF5FB" stroke="#2980B9" stroke-width="2"/>
+  <text x="400" y="162" text-anchor="middle" fill="#1A5276" font-size="12" font-weight="bold">STAGE 1  —  Table Selection Agent</text>
+
+  <!-- TableSelectionTool inner box -->
+  <rect x="50" y="170" width="500" height="120" rx="6" fill="#D6EAF8" stroke="#2980B9" stroke-width="1"/>
+  <text x="300" y="188" text-anchor="middle" fill="#1A5276" font-size="10" font-weight="bold">table-selection  ·  Hybrid Search  ·  Permission Filter  ·  TF-IDF Rerank</text>
+
+  <!-- Keyword Extraction Agent -->
+  <rect x="62" y="196" width="148" height="82" rx="5" fill="white" stroke="#5DADE2" stroke-width="1"/>
+  <text x="136" y="215" text-anchor="middle" fill="#154360" font-size="10" font-weight="bold">Keyword Extraction</text>
+  <text x="136" y="230" text-anchor="middle" fill="#888" font-size="9">Qwen2.5-72B</text>
+  <line x1="62" y1="237" x2="210" y2="237" stroke="#D0E8F5" stroke-width="1"/>
+  <text x="136" y="252" text-anchor="middle" fill="#555" font-size="9">Query rewriting</text>
+  <text x="136" y="268" text-anchor="middle" fill="#555" font-size="9">Keyword extraction</text>
+
+  <!-- DB/Table Recognition Agent -->
+  <rect x="226" y="196" width="148" height="82" rx="5" fill="white" stroke="#5DADE2" stroke-width="1"/>
+  <text x="300" y="215" text-anchor="middle" fill="#154360" font-size="10" font-weight="bold">DB/Table Recognition</text>
+  <text x="300" y="230" text-anchor="middle" fill="#888" font-size="9">Qwen2.5-72B</text>
+  <line x1="226" y1="237" x2="374" y2="237" stroke="#D0E8F5" stroke-width="1"/>
+  <text x="300" y="252" text-anchor="middle" fill="#555" font-size="9">DB name detection</text>
+  <text x="300" y="268" text-anchor="middle" fill="#555" font-size="9">Table identification</text>
+
+  <!-- Embedding Retriever -->
+  <rect x="390" y="196" width="148" height="82" rx="5" fill="white" stroke="#5DADE2" stroke-width="1"/>
+  <text x="464" y="215" text-anchor="middle" fill="#154360" font-size="10" font-weight="bold">Embedding Retriever</text>
+  <text x="464" y="230" text-anchor="middle" fill="#888" font-size="9">Semantic Search</text>
+  <line x1="390" y1="237" x2="538" y2="237" stroke="#D0E8F5" stroke-width="1"/>
+  <text x="464" y="252" text-anchor="middle" fill="#555" font-size="9">Top-K retrieval</text>
+  <text x="464" y="268" text-anchor="middle" fill="#555" font-size="9">Rerank + filter</text>
+
+  <!-- asset-overview -->
+  <rect x="568" y="170" width="183" height="56" rx="5" fill="#A9DFBF" stroke="#27AE60" stroke-width="1"/>
+  <text x="659" y="191" text-anchor="middle" fill="#1E8449" font-size="10" font-weight="bold">asset-overview</text>
+  <line x1="568" y1="198" x2="751" y2="198" stroke="#82C89A" stroke-width="1"/>
+  <text x="659" y="213" text-anchor="middle" fill="#1E8449" font-size="9">DB · table counts</text>
+  <text x="659" y="225" text-anchor="middle" fill="#1E8449" font-size="9">Permissions · disk usage</text>
+
+  <!-- superSQL -->
+  <rect x="568" y="236" width="183" height="56" rx="5" fill="#A9DFBF" stroke="#27AE60" stroke-width="1"/>
+  <text x="659" y="257" text-anchor="middle" fill="#1E8449" font-size="10" font-weight="bold">superSQL</text>
+  <line x1="568" y1="264" x2="751" y2="264" stroke="#82C89A" stroke-width="1"/>
+  <text x="659" y="279" text-anchor="middle" fill="#1E8449" font-size="9">SQL execution engine</text>
+  <text x="659" y="291" text-anchor="middle" fill="#1E8449" font-size="9">On-demand · user approval</text>
+
+  <!-- Arrow 3 -->
+  <line x1="400" y1="346" x2="400" y2="366" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="415" y="359" fill="#888" font-size="9">Table Schema + Context</text>
+
+  <!-- ─── STAGE 2: Data Generation ─── -->
+  <rect x="30" y="366" width="740" height="248" rx="10" fill="#F5EEF8" stroke="#8E44AD" stroke-width="2"/>
+  <text x="400" y="387" text-anchor="middle" fill="#6C3483" font-size="12" font-weight="bold">STAGE 2  —  Data Agent</text>
+
+  <!-- chart-visualizer inner box -->
+  <rect x="50" y="395" width="500" height="160" rx="6" fill="#E8DAEF" stroke="#8E44AD" stroke-width="1"/>
+  <text x="300" y="413" text-anchor="middle" fill="#6C3483" font-size="10" font-weight="bold">chart-visualizer  ·  Interactive ECharts Output</text>
+
+  <!-- Pie Agent -->
+  <rect x="62" y="421" width="112" height="120" rx="5" fill="white" stroke="#BB8FCE" stroke-width="1"/>
+  <text x="118" y="441" text-anchor="middle" fill="#4A235A" font-size="10" font-weight="bold">Pie Agent</text>
+  <text x="118" y="456" text-anchor="middle" fill="#777" font-size="9">饼图</text>
+  <line x1="62" y1="463" x2="174" y2="463" stroke="#E8DAEF" stroke-width="1"/>
+  <text x="118" y="478" text-anchor="middle" fill="#555" font-size="8">group · value</text>
+  <text x="118" y="492" text-anchor="middle" fill="#555" font-size="8">aggregation type</text>
+  <text x="118" y="510" text-anchor="middle" fill="#AAA" font-size="8">Qwen2.5-72B</text>
+  <text x="118" y="527" text-anchor="middle" fill="#AAA" font-size="8">JSON Schema</text>
+
+  <!-- Line Agent -->
+  <rect x="187" y="421" width="112" height="120" rx="5" fill="white" stroke="#BB8FCE" stroke-width="1"/>
+  <text x="243" y="441" text-anchor="middle" fill="#4A235A" font-size="10" font-weight="bold">Line Agent</text>
+  <text x="243" y="456" text-anchor="middle" fill="#777" font-size="9">折线图</text>
+  <line x1="187" y1="463" x2="299" y2="463" stroke="#E8DAEF" stroke-width="1"/>
+  <text x="243" y="478" text-anchor="middle" fill="#555" font-size="8">x-axis · y-axis</text>
+  <text x="243" y="492" text-anchor="middle" fill="#555" font-size="8">time series</text>
+  <text x="243" y="510" text-anchor="middle" fill="#AAA" font-size="8">Qwen2.5-72B</text>
+  <text x="243" y="527" text-anchor="middle" fill="#AAA" font-size="8">JSON Schema</text>
+
+  <!-- Bar Agent -->
+  <rect x="312" y="421" width="112" height="120" rx="5" fill="white" stroke="#BB8FCE" stroke-width="1"/>
+  <text x="368" y="441" text-anchor="middle" fill="#4A235A" font-size="10" font-weight="bold">Bar Agent</text>
+  <text x="368" y="456" text-anchor="middle" fill="#777" font-size="9">条形图</text>
+  <line x1="312" y1="463" x2="424" y2="463" stroke="#E8DAEF" stroke-width="1"/>
+  <text x="368" y="478" text-anchor="middle" fill="#555" font-size="8">category · metric</text>
+  <text x="368" y="492" text-anchor="middle" fill="#555" font-size="8">grouping</text>
+  <text x="368" y="510" text-anchor="middle" fill="#AAA" font-size="8">Qwen2.5-72B</text>
+  <text x="368" y="527" text-anchor="middle" fill="#AAA" font-size="8">JSON Schema</text>
+
+  <!-- Funnel Agent -->
+  <rect x="437" y="421" width="100" height="120" rx="5" fill="white" stroke="#BB8FCE" stroke-width="1"/>
+  <text x="487" y="441" text-anchor="middle" fill="#4A235A" font-size="10" font-weight="bold">Funnel Agent</text>
+  <text x="487" y="456" text-anchor="middle" fill="#777" font-size="9">漏斗图</text>
+  <line x1="437" y1="463" x2="537" y2="463" stroke="#E8DAEF" stroke-width="1"/>
+  <text x="487" y="478" text-anchor="middle" fill="#555" font-size="8">dimension · value</text>
+  <text x="487" y="492" text-anchor="middle" fill="#555" font-size="8">pipeline stages</text>
+  <text x="487" y="510" text-anchor="middle" fill="#AAA" font-size="8">Qwen2.5-72B</text>
+  <text x="487" y="527" text-anchor="middle" fill="#AAA" font-size="8">JSON Schema</text>
+
+  <!-- data-analysis -->
+  <rect x="568" y="395" width="183" height="82" rx="5" fill="#A9DFBF" stroke="#27AE60" stroke-width="1"/>
+  <text x="659" y="416" text-anchor="middle" fill="#1E8449" font-size="10" font-weight="bold">data-analysis</text>
+  <line x1="568" y1="424" x2="751" y2="424" stroke="#82C89A" stroke-width="1"/>
+  <text x="659" y="440" text-anchor="middle" fill="#1E8449" font-size="9">Python · Pandas</text>
+  <text x="659" y="455" text-anchor="middle" fill="#1E8449" font-size="9">scikit-learn · statsmodels</text>
+  <text x="659" y="468" text-anchor="middle" fill="#1E8449" font-size="9">Statistical analysis</text>
+
+  <!-- seaborn-drawer -->
+  <rect x="568" y="489" width="183" height="82" rx="5" fill="#A9DFBF" stroke="#27AE60" stroke-width="1"/>
+  <text x="659" y="510" text-anchor="middle" fill="#1E8449" font-size="10" font-weight="bold">seaborn-drawer</text>
+  <line x1="568" y1="518" x2="751" y2="518" stroke="#82C89A" stroke-width="1"/>
+  <text x="659" y="534" text-anchor="middle" fill="#1E8449" font-size="9">Seaborn · Matplotlib</text>
+  <text x="659" y="549" text-anchor="middle" fill="#1E8449" font-size="9">Heatmap · Box Plot</text>
+  <text x="659" y="562" text-anchor="middle" fill="#1E8449" font-size="9">Violin · Histogram</text>
+
+  <!-- Arrow 4 -->
+  <line x1="400" y1="614" x2="400" y2="636" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Visualization Output -->
+  <rect x="230" y="636" width="340" height="46" rx="23" fill="#27AE60" stroke="#1E8449" stroke-width="1.5"/>
+  <text x="400" y="656" text-anchor="middle" fill="white" font-size="13" font-weight="bold">Visualization Output</text>
+  <text x="400" y="672" text-anchor="middle" fill="rgba(255,255,255,0.9)" font-size="10">Interactive Charts  ·  Statistical Reports</text>
+</svg>
