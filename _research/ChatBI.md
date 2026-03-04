@@ -22,57 +22,64 @@ ChatBI addresses both challenges end-to-end: the Table Selection Agent handles d
 
 ## Part II: Architecture
 
-<img src="/images/chatbi_arch.svg" alt="ChatBI Architecture" style="max-width: 100%;">
+<img src="/images/整体架构图2.png" alt="ChatBI Overall Architecture" style="max-width: 100%;">
 
-ChatBI is built on Tencent's internal **WeData / LLMApp** platform and deployed as a production conversational interface. The end-to-end pipeline is powered by **DeepSeek-R1** as the primary reasoning model, operating in a **ReAct loop** (Reason + Act) with function-call-style tool dispatch. A shared **PreProcess** module normalizes user input and injects structured context before each stage.
+ChatBI is organized into three stacked layers, each building on the one below.
 
-| Component | Role | Backbone Model |
-|-----------|------|----------------|
-| DeepSeek-R1 Orchestrator | ReAct loop, tool dispatch, intent parsing | DeepSeek-R1 |
-| Table Selection Agent | Hybrid retrieval, schema recommendation | Qwen2.5-72B + DeepSeek-R1 |
-| Data Agent | Statistical analysis, chart generation | Qwen2.5-72B + DeepSeek-R1 |
+**Layer 1 --- Knowledge Foundation (知识基建层)** sits at the base. Raw AMS data assets---structured metadata (table schemas, data cube definitions, user org hierarchies, historical SQL logs) and unstructured signals (product understanding protos, user behavior protos)---are ingested and processed into three purpose-built knowledge bases: a **business knowledge base** (业务知识库) for domain context and enriched metadata, a **compliance knowledge base** (合规知识库) encoding sensitivity levels and access policies, and a **benchmark evaluation set** (样本评测集) used for quality monitoring.
 
-**Stage 1 --- Table Selection** resolves the user's natural language question into a set of recommended table schemas by combining keyword-based and embedding-based retrieval with permission filtering. **Stage 2 --- Data Generation** takes the retrieved schema and user intent to produce interactive charts or statistical reports through a dedicated toolset.
+**Layer 2 --- Data Retrieval Agent (取数Agent)** handles the full query pipeline. An incoming user question first passes through **compliance checking** against the compliance knowledge base; non-compliant queries are rejected before any data is accessed. Compliant queries proceed to **intent classification**, which routes the request to the appropriate downstream handler and ultimately produces a **SQL query** for data retrieval.
 
-## Part III: Table Selection Agent
+**Layer 3 --- Data Analysis Agent (数据分析Agent)** receives the retrieved data and generates the final response. Depending on the task, it dispatches to a **Python sandbox** for statistical computation and preprocessing, a **chart rendering tool** (小马画图) for interactive BI charts, or **Seaborn** for static statistical visualizations.
 
-The Table Selection Agent is built on **ChatData**, Tencent's internal metadata-aware RAG system for enterprise data discovery. It exposes three tools to the DeepSeek-R1 orchestrator:
+## Part III: Knowledge Base
 
-| Tool | Function |
-|------|----------|
-| `table-selection` | Hybrid retrieval (keyword + embedding) over the metadata catalog; returns recommended table names and column schemas |
-| `asset-overview` | Queries data asset metadata: accessible databases, table counts, storage types, disk usage, and permission status |
-| `superSQL` | Executes SQL against the Tencent SuperSQL engine---only triggered upon explicit user confirmation |
+<img src="/images/知识库构建v2.png" alt="Knowledge Base Construction" style="max-width: 100%;">
 
-The `table-selection` tool itself encapsulates a three-component sub-pipeline, each powered by **Qwen2.5-72B**:
+The knowledge base underpinning ChatBI is constructed through a four-layer pipeline modeled after a data warehouse architecture.
 
-- **Keyword Extraction Agent** --- Rewrites the user's original question with historical context into a concise, retrieval-optimized keyword query, removing ambiguity and normalizing terminology.
-- **DB/Table Name Recognition Agent** --- Detects any database or table names explicitly mentioned in the conversation, enabling direct lookup before invoking full retrieval.
-- **Embedding Retriever** --- Performs semantic vector search over the metadata catalog with Top-K retrieval, followed by TF-IDF reranking over column fields. A filter layer removes test, temporary, and debug tables before returning results.
+**知识ODS层 (Raw Knowledge Layer)** is the source of truth. It contains two categories of data assets: structured knowledge---table and data cube metadata from 数平 and 数立方, field-level sensitivity classifications, and user org hierarchy---and unstructured knowledge in the form of product understanding and user behavior protos. These are ingested as-is without transformation.
 
-The three components feed jointly into `table-selection`, which applies hybrid search (embedding score weighted with keyword score), enforces permission-based filtering, and returns the top candidate schemas to the orchestrator. If the user's question concerns only asset-level queries---such as "how many tables do I have access to in database X"---the orchestrator routes directly to `asset-overview` instead.
+**知识统一处理层 (Unified Processing Layer)** applies a sequential ETL pipeline: raw documents are **read** from their source systems, **cleaned** to remove noise and normalize formats, **structured** into a consistent schema, and finally **loaded** into the downstream knowledge stores. This layer ensures that all knowledge, regardless of origin, enters the system in a queryable, uniform representation.
 
-## Part IV: Data Agent
+**知识DWD层 (Knowledge Detail Layer)** organizes processed knowledge into three domain-specific stores:
 
-The Data Agent takes the recommended table schemas and user intent as input and dispatches to three tools for analysis and visualization:
+| Knowledge Base | Contents |
+|----------------|----------|
+| **库表元信息知识库** | 数平 and 数立方 table metadata, field descriptions, and schema definitions |
+| **合规知识库** | Table and field sensitivity levels, user organization and permission hierarchy |
+| **业务知识库** | Enriched metadata annotations, data quality signals, and domain-specific context |
 
-| Tool | Type | Function |
-|------|------|----------|
-| `chart-visualizer` | Interactive HTML (ECharts) | Renders line, bar, pie, and funnel charts from pre-processed data |
-| `data-analysis` | Python sandbox | Data cleaning, pandas manipulation, statistical analysis, time-series modeling |
-| `seaborn-drawer` | Static PNG | Heatmaps, box plots, violin plots, histograms---chart types not covered by `chart-visualizer` |
+**知识应用层 (Application Layer)** exposes the knowledge bases to four downstream tasks: **合规判断** (compliance checking before data access), **数据解读** (LLM-augmented data interpretation), **text2sql** (natural language to SQL translation grounded in table metadata), and **数据洞察** (automated insight generation over retrieved data).
 
-**Chart Visualization Pipeline**
+The retrieval mechanism for text2sql combines keyword-based and embedding-based search over the metadata catalog. A **Keyword Extraction Agent** rewrites the user question into a retrieval-optimized query; a **DB/Table Name Recognition Agent** handles explicit table references via direct lookup; and an **Embedding Retriever** performs Top-K semantic search followed by TF-IDF reranking over column fields. Hybrid scoring (embedding score weighted with keyword score) and permission-based filtering then produce the final set of candidate table schemas.
 
-`chart-visualizer` does not render charts directly from raw data. For each supported chart type, a dedicated **Qwen2.5-72B sub-agent** first parses the user's intent and extracts the necessary chart elements into a validated JSON Schema---specifying dimensions, metrics, aggregation methods, and axis mappings---before passing the structured configuration to the ECharts renderer.
+## Part IV: Multi-Agent Interaction
 
-| Agent | Chart Type | Extracted Fields |
-|-------|-----------|-----------------|
-| Pie Agent | Pie Chart (饼图) | `group`, `value`, aggregation type (sum / count / avg) |
-| Line Agent | Line Chart (折线图) | x-axis (time / category), y-axis metric, time granularity |
-| Bar Agent | Bar Chart (条形图) | category dimension, metric, optional secondary grouping |
-| Funnel Agent | Funnel Chart (漏斗图) | pipeline stage dimension, conversion value |
+<img src="/images/Multi-Agent交互链路图3.png" alt="Multi-Agent Interaction Flow" style="max-width: 100%;">
 
-**Data Analysis and Static Charts**
+ChatBI's end-to-end pipeline is executed by two cooperating agents: a **取数Agent** that handles query understanding and data retrieval, and a **数据分析Agent** that processes the retrieved data and generates the final response.
 
-When the task requires computation beyond direct visualization---such as preprocessing, feature engineering, or statistical modeling---the orchestrator invokes `data-analysis`, a secure Python sandbox with access to numpy, pandas, scikit-learn, and statsmodels. For chart types outside the ECharts repertoire (e.g., box plots, violin plots, heatmaps), `seaborn-drawer` generates static `.png` outputs via Seaborn and Matplotlib as a fallback.
+**取数Agent**
+
+Every user question enters the 取数Agent and is first evaluated by a **compliance checker** (合规判断). Queries that violate data access policies---such as requests for restricted fields or unauthorized databases---are immediately rejected with a model-generated refusal. Compliant queries proceed to **intent classification** (意图分类), which routes the request along one of three paths:
+
+| Intent | Handler | Output |
+|--------|---------|--------|
+| **元信息查询** | RAG retrieval over the knowledge base | Direct answer from knowledge base |
+| **数据洞察** | RAG retrieval over the knowledge base | Insight narrative from retrieved context |
+| **取数分析** | text2sql pipeline | Executable SQL query |
+
+For **取数分析**, the intent classifier triggers the full text2sql sub-pipeline: keyword extraction, table name recognition, embedding-based retrieval, and hybrid reranking (described in Part III) together produce a SQL query that is executed against the Tencent SuperSQL engine.
+
+**数据分析Agent**
+
+Once data is retrieved, the 数据分析Agent selects the appropriate rendering tool based on the visualization task:
+
+| Tool | Capabilities |
+|------|-------------|
+| **Python 沙箱** | Data cleaning and preprocessing, exploratory data analysis (EDA), feature engineering and statistical modeling |
+| **小马画图 BI** | Interactive line charts (折线图), bar charts (条形图), pie charts (饼图), funnel charts (漏斗图) |
+| **Seaborn 画图** | Static statistical charts: box plots (箱线图), histograms (直方图), violin plots (小提琴图), heatmaps (热力图) |
+
+For interactive chart rendering, a dedicated **Qwen2.5-72B sub-agent** first extracts the necessary chart configuration---dimensions, metrics, aggregation methods, and axis mappings---into a validated JSON Schema before passing it to the chart renderer. This structured intermediate step decouples intent parsing from rendering and prevents hallucinated field names or invalid configurations from reaching the visualization layer.
