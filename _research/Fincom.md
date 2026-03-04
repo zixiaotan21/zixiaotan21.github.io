@@ -2,7 +2,7 @@
 title: "FinCom: Financial Multi-Agent Systems"
 image:
   path: /images/banner1.jpg
-  thumbnail: /images/clearpath.png
+  thumbnail: /images/img.png
   caption: "Photo from [Vecteezy.com](https://www.vecteezy.com/)"
 ---
 
