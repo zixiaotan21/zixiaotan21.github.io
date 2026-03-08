@@ -24,7 +24,7 @@ I am a Master's student in Statistics at Duke University with 3+ years of indust
 ## 💼 Professional Experience
 
 <div style="margin-bottom: 1.5em;">
-  <a href="https://www.lenovo.com/"><img src="/images/Lenovo_Logo.png" alt="Lenovo" style="height:24px; vertical-align:middle;"></a>
+  <a href="https://www.lenovo.com/"><img src="/images/Lenovo_Logo.png" alt="Lenovo" style="height:40px; vertical-align:middle;"></a>
   &nbsp;·&nbsp; Morrisville, NC &nbsp;·&nbsp; <em>Jan 2026 – Present</em><br>
   <em>Global Pricing Analyst</em>
   <ul>
