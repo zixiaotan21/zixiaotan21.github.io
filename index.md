@@ -24,9 +24,9 @@ I am a Master's student in Statistics at Duke University with 3+ years of indust
 ## 💼 Professional Experience
 
 <div style="margin-bottom: 1.5em;">
-  <strong>Global Pricing Analyst</strong> &nbsp;·&nbsp;
-  <a href="https://www.lenovo.com/">Lenovo</a> &nbsp;·&nbsp;
-  Morrisville, NC &nbsp;·&nbsp; <em>Jan 2026 – Present</em>
+  <a href="https://www.lenovo.com/"><img src="/images/lenovo.svg" alt="Lenovo" style="height:24px; vertical-align:middle;"></a>
+  &nbsp;·&nbsp; Morrisville, NC &nbsp;·&nbsp; <em>Jan 2026 – Present</em><br>
+  <em>Global Pricing Analyst</em>
   <ul>
     <li>Supported Finance team in 420 global accounts repricing under unprecedented cost increases</li>
     <li>Engineered repricing tracking tools for Sales using Power Automate; automated rebate calculation with Power BI</li>
@@ -35,10 +35,9 @@ I am a Master's student in Statistics at Duke University with 3+ years of indust
 </div>
 
 <div style="margin-bottom: 1.5em;">
-  <strong>AI Engineer</strong> &nbsp;·&nbsp;
-  ClearPath &nbsp;·&nbsp;
-  New York, NY &nbsp;·&nbsp; <em>Aug 2025 – Dec 2025</em>
-  <img src="/images/clearpath.png" alt="ClearPath" style="height:30px; vertical-align:middle; margin-left:8px;">
+  <img src="/images/clearpath.png" alt="ClearPath" style="height:28px; vertical-align:middle;">
+  &nbsp;·&nbsp; New York, NY &nbsp;·&nbsp; <em>Aug 2025 – Dec 2025</em><br>
+  <em>AI Engineer</em>
   <ul>
     <li>Developed an AI Investment Chatbot for ideation, research, and implementation across the investment workflow</li>
     <li>Built a Multi-Agent System with LangGraph and LangSmith, orchestrating specialized agents for Market Research, Quantitative Analysis, and Risk Management</li>
@@ -48,10 +47,9 @@ I am a Master's student in Statistics at Duke University with 3+ years of indust
 </div>
 
 <div style="margin-bottom: 1.5em;">
-  <strong>Machine Learning Engineer</strong> &nbsp;·&nbsp;
-  <a href="https://www.tencent.com/en-us/">Tencent</a> &nbsp;·&nbsp;
-  <img src="/images/Tencent_logo.png" alt="Tencent" style="height:20px; vertical-align:middle; margin-left:4px;"> &nbsp;·&nbsp;
-  Shenzhen, China &nbsp;·&nbsp; <em>May 2025 – Aug 2025</em>
+  <a href="https://www.tencent.com/en-us/"><img src="/images/Tencent_logo.png" alt="Tencent" style="height:24px; vertical-align:middle;"></a>
+  &nbsp;·&nbsp; Shenzhen, China &nbsp;·&nbsp; <em>May 2025 – Aug 2025</em><br>
+  <em>Machine Learning Engineer</em>
   <ul>
     <li>Deployed a RAG + Multi-Agent framework to build the ChatBI Agent for the Database Team</li>
     <li>Built specialized agents and analytical tools for Data Insight, SQL query, and dynamic data visualization</li>
