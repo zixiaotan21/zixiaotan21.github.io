@@ -47,7 +47,7 @@ I am a Master's student in Statistics at Duke University with 3+ years of indust
 </div>
 
 <div style="margin-bottom: 1.5em;">
-  <a href="https://www.tencent.com/en-us/"><img src="/images/Tencent_logo.png" alt="Tencent" style="height:24px; vertical-align:middle;"></a>
+  <a href="https://www.tencent.com/en-us/"><img src="/images/Tencent_logo.png" alt="Tencent" style="height:40px; vertical-align:middle;"></a>
   &nbsp;·&nbsp; Shenzhen, China &nbsp;·&nbsp; <em>May 2025 – Aug 2025</em><br>
   <em>Machine Learning Engineer</em>
   <ul>
