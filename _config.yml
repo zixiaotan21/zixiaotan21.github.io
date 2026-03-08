@@ -18,9 +18,7 @@ remote_theme: "mmistakes/so-simple-theme@3.2.0"
 skin: "/assets/css/skins/default.css"
 locale: en-US
 title: "Tom Tan"
-#description: "<b> D</b>iscovering <b> A</b>nswers, <b> T</b>apping <b> A</b>wesomeness"
-description: "<b> F</b>ailure is an  <b> O</b>ption, <b> F</b>ear is <b> N</b>ot"
-#description: "<b> Failure is an  Option, Fear is Not</b>"
+description: "Failure is an Option, Fear is Not"
 #baseurl: "/hollyyfc.github.io" # the subpath of your site, e.g. #"/blog"
 url: "https://zixiaotan21.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 logo: "/images/crop.jpg" # path of site logo
@@ -108,7 +106,7 @@ defaults:
 
 # Site Author
 author:
-  name: Zixiao Tan
+  name: Tom Tan
   picture: /images/crop.jpg
   email: zixiaotan2023@gmail.com
   twitter:

@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: page
 show_excerpts: false
 header: false
 title: Activities & Awards
