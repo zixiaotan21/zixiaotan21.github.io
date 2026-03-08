@@ -35,8 +35,7 @@ I am a Master's student in Statistics at Duke University with 3+ years of indust
 </div>
 
 <div style="margin-bottom: 1.5em;">
-  <img src="/images/clearpath.png" alt="ClearPath" style="height:28px; vertical-align:middle;">
-  &nbsp;·&nbsp; New York, NY &nbsp;·&nbsp; <em>Aug 2025 – Dec 2025</em><br>
+  <strong>ClearPath</strong> &nbsp;·&nbsp; New York, NY &nbsp;·&nbsp; <em>Aug 2025 – Dec 2025</em><br>
   <em>AI Engineer</em>
   <ul>
     <li>Developed an AI Investment Chatbot for ideation, research, and implementation across the investment workflow</li>
