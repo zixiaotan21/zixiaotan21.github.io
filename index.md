@@ -11,8 +11,6 @@ title:
 
 **Global Pricing Analyst @ Lenovo** &nbsp;·&nbsp; MS Statistics, Duke University
 
-> *Failure is an Option, Fear is Not*
-
 I am a Master's student in Statistics at Duke University with 3+ years of industry experience building AI/ML systems and data products. My work spans multi-agent LLM architectures, causal inference, and statistical modeling.
 
 <div style="margin: 1.2em 0;">
@@ -46,6 +44,7 @@ I am a Master's student in Statistics at Duke University with 3+ years of indust
     <li>Built a Multi-Agent System with LangGraph and LangSmith, orchestrating specialized agents for Market Research, Quantitative Analysis, and Risk Management</li>
     <li>Launched interactive UI with Figma, delivering research and insights across each agent's area of specialization</li>
   </ul>
+  <a href="https://zixiaotan21.github.io/research/Fincom/">→ Read More</a>
 </div>
 
 <div style="margin-bottom: 1.5em;">
@@ -58,6 +57,7 @@ I am a Master's student in Statistics at Duke University with 3+ years of indust
     <li>Built specialized agents and analytical tools for Data Insight, SQL query, and dynamic data visualization</li>
     <li>Integrated ChatBI with production BI platform, streamlining real-time data access for end-users</li>
   </ul>
+  <a href="https://zixiaotan21.github.io/research/ChatBI/">→ Read More</a>
 </div>
 
 ---
